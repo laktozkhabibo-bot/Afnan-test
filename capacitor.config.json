@@ -1,0 +1,18 @@
+{
+  "appId": "com.afnan.app",
+  "appName": "أفنان",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "backgroundColor": "#0C4636",
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon",
+      "iconColor": "#1E6F50"
+    },
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#0C4636",
+      "showSpinner": false
+    }
+  }
+}

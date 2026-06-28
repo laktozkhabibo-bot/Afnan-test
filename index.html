@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="أفنان" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#1E6F50" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="apple-touch-icon" href="assets/icon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon/icon-192.png" />
+<title>أفنان · تطبيق الرحلة الإيمانية</title>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#2E7A54"/><g transform="translate(50 50)"><circle cx="0" cy="-6" r="11" fill="#A6DBB8"/><circle cx="-9" cy="1" r="8" fill="#86C9A0"/><circle cx="9" cy="1" r="8" fill="#86C9A0"/><rect x="-1.8" y="2" width="3.6" height="14" rx="1.8" fill="#F4DCB0"/><path d="M-14 18 Q0 12 14 18 L14 20 L-14 20 Z" fill="#F4DCB0"/></g></svg>
+</template>
+<style>
+  html, body { margin: 0; padding: 0; background: #DDE6D5; }
+  * { box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<!-- inline image map + src interceptor: must load before everything else -->
+<script src="src/core/assets_inline.js"></script>
+<script src="src/core/prayer_calc.js"></script>
+<script src="src/core/prayer_times.js"></script>
+<script src="src/core/notifications.js"></script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- core -->
+<script type="text/babel" src="src/core/ios-frame.jsx"></script>
+<script type="text/babel" src="src/core/theme.jsx"></script>
+<script type="text/babel" src="src/core/ui.jsx"></script>
+
+<!-- data (pure JS — loaded as plain scripts to avoid needless Babel transpiling) -->
+<script src="src/data/data.jsx"></script>
+<script src="src/data/hadith.jsx"></script>
+<script src="src/data/hadith_detail.jsx"></script>
+<script src="src/data/quran_data.jsx"></script>
+<script src="src/data/word_meanings.jsx"></script>
+<script src="src/data/i18n.jsx"></script>
+<script src="src/data/content_i18n.jsx"></script>
+<script src="src/data/content_hadith_i18n.jsx"></script>
+<script src="src/data/content_hadith_detail_i18n.jsx"></script>
+<script src="src/data/content_hadith_sharh_i18n.jsx"></script>
+<script src="src/data/content_guide_i18n.jsx"></script>
+<script src="src/data/content_tajweed_i18n.jsx"></script>
+<script src="src/data/content_adhkar_i18n.jsx"></script>
+
+<!-- screens -->
+<script type="text/babel" src="src/screens/quran.jsx"></script>
+<script type="text/babel" src="src/screens/screen_khatmat.jsx"></script>
+<script type="text/babel" src="src/screens/hadith_sheet.jsx"></script>
+<script type="text/babel" src="src/screens/welcome_sheet.jsx"></script>
+<script type="text/babel" src="src/screens/tasbih_card.jsx"></script>
+<script type="text/babel" src="src/screens/screen_home.jsx"></script>
+<script type="text/babel" src="src/screens/screen_prayer.jsx"></script>
+<script type="text/babel" src="src/screens/screen_adhkar.jsx"></script>
+<script type="text/babel" src="src/screens/screen_settings.jsx"></script>
+
+<!-- root -->
+<script type="text/babel" src="src/app.jsx"></script>
+
+<!-- service worker: تخزينٌ دون إنترنت + إشعارات (يُسجَّل فقط على http/https وليس عند فتح الملف مباشرة) -->
+<script>
+  if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    });
+  }
+</script>
+</body>
+</html>

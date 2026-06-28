@@ -1,0 +1,619 @@
+--- a/src/data/i18n.jsx
++++ b/src/data/i18n.jsx
+@@ -192,6 +192,30 @@
+   q_err_trans:   { ar: 'تعذّر تحميل الترجمة — تحقّق من اتصالك', en: 'Could not load translation — check your connection', tr: 'Çeviri yüklenemedi — bağlantını kontrol et', ur: 'ترجمہ لوڈ نہ ہوا — کنکشن چیک کریں', id: 'Gagal memuat terjemahan — periksa koneksi' },
+   btn_retry:     { ar: 'إعادة المحاولة', en: 'Try again', tr: 'Tekrar dene', ur: 'دوبارہ کوشش', id: 'Coba lagi' },
+ 
++  // ── نظام صفحات المصحف ──
++  st_quran_view: { ar: 'نظام عرض القرآن', en: 'Quran display mode', tr: "Kur'an görünümü", ur: 'قرآن کا اندازِ نمائش', id: 'Mode tampilan Quran' },
++  qv_surah:      { ar: 'نظام السور', en: 'By surah', tr: 'Sûre düzeni', ur: 'سورت کے اعتبار سے', id: 'Per surah' },
++  qv_pages:      { ar: 'صفحات المصحف', en: 'Mushaf pages', tr: 'Mushaf sayfaları', ur: 'مصحف کے صفحات', id: 'Halaman mushaf' },
++  qv_surah_sub:  { ar: 'تقرأ كلَّ سورة كاملةً بالتمرير', en: 'Read each surah by scrolling', tr: 'Her sureyi kaydırarak oku', ur: 'ہر سورت اسکرول کر کے پڑھیں', id: 'Baca tiap surah dengan menggulir' },
++  qv_pages_sub:  { ar: 'تصفّح القرآن صفحةً صفحة كالمصحف المطبوع', en: 'Browse page by page like the printed mushaf', tr: 'Basılı mushaf gibi sayfa sayfa gez', ur: 'چھپے مصحف کی طرح صفحہ بہ صفحہ', id: 'Telusuri halaman demi halaman seperti mushaf' },
++  qp_loading:    { ar: 'تُحمّل صفحة المصحف…', en: 'Loading mushaf page…', tr: 'Mushaf sayfası yükleniyor…', ur: 'مصحف کا صفحہ لوڈ ہو رہا ہے…', id: 'Memuat halaman mushaf…' },
++  qp_err:        { ar: 'تعذّر تحميل الصفحة', en: 'Could not load the page', tr: 'Sayfa yüklenemedi', ur: 'صفحہ لوڈ نہ ہو سکا', id: 'Gagal memuat halaman' },
++  qp_menu_index: { ar: 'الرجوع إلى الفهرس', en: 'Back to index', tr: 'Fihriste dön', ur: 'فہرست پر واپس', id: 'Kembali ke indeks' },
++  qp_menu_home:  { ar: 'الصفحة الرئيسية', en: 'Home', tr: 'Ana sayfa', ur: 'مرکزی صفحہ', id: 'Beranda' },
++  qp_menu_bm:    { ar: 'وضع علامة', en: 'Set bookmark', tr: 'Yer imi koy', ur: 'نشان لگائیں', id: 'Tandai halaman' },
++  qp_menu_goto:  { ar: 'الانتقال إلى العلامة', en: 'Go to bookmark', tr: 'Yer imine git', ur: 'نشان پر جائیں', id: 'Ke tanda' },
++  qp_menu_read:  { ar: 'قراءة الصفحة كاملة', en: 'Recite full page', tr: 'Sayfayı sesli oku', ur: 'پورا صفحہ پڑھیں', id: 'Baca seluruh halaman' },
++  qp_soon:       { ar: 'قريباً', en: 'Soon', tr: 'Yakında', ur: 'جلد', id: 'Segera' },
++  qp_soon_msg:   { ar: 'ستتوفّر القراءة الصوتية قريبًا بإذن الله', en: 'Audio recitation will be available soon', tr: 'Sesli okuma yakında eklenecek', ur: 'صوتی تلاوت جلد دستیاب ہوگی', id: 'Tilawah audio segera tersedia' },
++  qp_bm_set:     { ar: 'وُضِعت علامة على هذه الصفحة', en: 'Page bookmarked', tr: 'Sayfa yer imine eklendi', ur: 'صفحہ نشان زدہ', id: 'Halaman ditandai' },
++  qp_no_bm:      { ar: 'لا توجد علامة محفوظة بعد', en: 'No bookmark saved yet', tr: 'Henüz yer imi yok', ur: 'ابھی کوئی نشان نہیں', id: 'Belum ada tanda' },
++  qp_page_of:    { ar: 'صفحة {n}', en: 'Page {n}', tr: 'Sayfa {n}', ur: 'صفحہ {n}', id: 'Halaman {n}' },
++  qa_translation:{ ar: 'الترجمة', en: 'Translation', tr: 'Çeviri', ur: 'ترجمہ', id: 'Terjemahan' },
++  qa_tafsir:     { ar: 'التفسير', en: 'Tafsir', tr: 'Tefsir', ur: 'تفسیر', id: 'Tafsir' },
++  qa_save:       { ar: 'حفظ الآية', en: 'Save verse', tr: 'Ayeti kaydet', ur: 'آیت محفوظ کریں', id: 'Simpan ayat' },
++  qa_unsave:     { ar: 'إزالة الآية', en: 'Remove verse', tr: 'Ayeti kaldır', ur: 'آیت ہٹائیں', id: 'Hapus ayat' },
++  qa_read:       { ar: 'قراءة الآية', en: 'Recite verse', tr: 'Ayeti oku', ur: 'آیت پڑھیں', id: 'Baca ayat' },
++
+   // ── الأذكار ──
+   ad_sub:        { ar: 'حصِّنْ يومك بالأذكار', en: 'Fortify your day with adhkar', tr: 'Gününü zikirlerle güçlendir', ur: 'اپنا دن اذکار سے محفوظ کریں', id: 'Perkuat harimu dengan zikir' },
+   ad_count:      { ar: '{n} ذكرًا', en: '{n} adhkar', tr: '{n} zikir', ur: '{n} اذکار', id: '{n} zikir' },
+--- a/src/app.jsx
++++ b/src/app.jsx
+@@ -28,7 +28,9 @@
+     qiraah: 'حفص عن عاصم',
+     translation: 'none',
+     fontScale: 1,
++    quranView: 'surah',     // 'surah' = نظام السور · 'pages' = صفحات المصحف
+     bookmark: null,
++    pageBookmark: null,     // علامة صفحة المصحف (مرتبطة برقم الصفحة)
+     saved: [],
+     seenQuranIntro: false,
+     dontShowQuranIntro: false,
+@@ -59,6 +61,7 @@
+   const [st, setSt] = useState(loadState);
+   const [surah, setSurah] = useState(null);     // open surah number
+   const [jumpAyah, setJumpAyah] = useState(null); // optional ayah to scroll to
++  const [mushafPage, setMushafPage] = useState(null); // open mushaf page (نظام صفحات المصحف)
+   const [cat, setCat] = useState(null);         // open adhkar category
+   const [hadithSheet, setHadithSheet] = useState(null); // حديث الشرح المفتوح
+   const [showWelcome, setShowWelcome] = useState(() => { try { const s = JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); return !!s.lang && !s.dontShowWelcome; } catch (e) { return false; } });
+@@ -93,6 +96,8 @@
+   const update = (patch) => setSt(s => ({ ...s, ...patch }));
+   const openSurah = (num, ayah = null) => { setSurah(num); setJumpAyah(ayah || null); };
+   const closeSurah = () => { setSurah(null); setJumpAyah(null); };
++  const openMushafPage = (p) => setMushafPage(p || 1);
++  const closeMushafPage = () => setMushafPage(null);
+   const setKhatmat = (updater) => setSt(s => ({ ...s, khatmat: typeof updater === 'function' ? updater(s.khatmat || []) : updater }));
+   const setSaved = (updater) => setSt(s => ({ ...s, saved: typeof updater === 'function' ? updater(s.saved || []) : updater }));
+ 
+@@ -110,6 +115,10 @@
+           qiraah={st.qiraah || 'حفص عن عاصم'}
+           translation={st.translation || 'none'}
+           bookmark={st.bookmark} onBookmark={(bm) => update({ bookmark: bm })}
++          quranView={st.quranView || 'surah'}
++          openPage={mushafPage} onOpenPage={openMushafPage} onClosePage={closeMushafPage}
++          pageBookmark={st.pageBookmark || null} onSetPageBookmark={(p) => update({ pageBookmark: p })}
++          onGoHome={() => setTab('home')}
+           saved={st.saved || []} setSaved={setSaved}
+           seenIntro={!!st.dontShowQuranIntro} onSeenIntro={() => update({ dontShowQuranIntro: true })}
+           khatmat={st.khatmat || []} setKhatmat={setKhatmat} userName={st.name} />
+@@ -137,11 +146,11 @@
+         <window.WelcomeSheet onClose={() => { update({ dontShowWelcome: true }); setShowWelcome(false); }} />
+       )}
+ 
+-      {/* hide tab bar inside immersive sub-views (surah reader) */}
+-      {!(tab === 'quran' && surah) && (
++      {/* hide tab bar inside immersive sub-views (surah reader · mushaf page reader) */}
++      {!(tab === 'quran' && (surah || mushafPage)) && (
+         <TabBar active={tab} onChange={(t) => { setTab(t);
+           if (t !== 'adhkar') setCat(null);
+-          if (t !== 'quran') setSurah(null);
++          if (t !== 'quran') { setSurah(null); setMushafPage(null); }
+         }} />
+       )}
+     </div>
+--- a/src/screens/screen_settings.jsx
++++ b/src/screens/screen_settings.jsx
+@@ -387,6 +387,11 @@
+         {/* recitation */}
+         <SectionLabel>{t('st_qurani')}</SectionLabel>
+         <Card style={{ overflow: 'hidden' }}>
++          <SelectRow icon="book" tint="#E0EFE6" glyph={T.green} img="assets/settings/click.png" title={t('st_quran_view')}
++            value={(state.quranView || 'surah') === 'pages' ? t('qv_pages') : t('qv_surah')}
++            onClick={() => setSheet({ title: t('st_quran_view'),
++              options: [t('qv_surah'), t('qv_pages')], value: (state.quranView || 'surah') === 'pages' ? t('qv_pages') : t('qv_surah'),
++              onPick: (v) => { onChange({ quranView: v === t('qv_pages') ? 'pages' : 'surah' }); setSheet(null); } })} />
+           <SelectRow icon="book" tint="#E0EFE6" glyph={T.green} img="assets/settings/qiraat.png" title={t('st_qiraat')} value={state.qiraah || QIRAAH_DEFAULT}
+             stacked onClick={() => setQSheet(true)} />
+           <SelectRow icon="quote" tint="#F0E0D2" glyph={T.clay} img="assets/settings/qari.png" title={t('st_reciter')} value={state.reciter || RECITERS[0]}
+--- a/src/screens/quran.jsx
++++ b/src/screens/quran.jsx
+@@ -691,7 +691,7 @@
+ const FONT_STEPS = [22, 26, 30, 34, 40, 46];
+ 
+ // ── فهرس المصحف ────────────────────────────────────────────────────────
+-function QuranIndex({ onOpen, onOpenKhatmat, onOpenSaved, savedCount, bookmark, onResume, qiraah }) {
++function QuranIndex({ onOpen, onOpenKhatmat, onOpenSaved, savedCount, bookmark, onResume, qiraah, quranView, pageBookmark, onResumePage }) {
+   const [q, setQ] = React.useState('');
+   const rawiShort = String(qiraah || 'حفص عن عاصم').split(' عن ')[0];
+   const ql = q.trim().toLowerCase();
+@@ -721,6 +721,23 @@
+         </div>
+       )}
+ 
++      {/* متابعة قراءة المصحف — في نظام صفحات المصحف */}
++      {quranView === 'pages' && pageBookmark && (
++        <div onClick={onResumePage} className="afn-tap" style={{ display: 'flex', alignItems: 'center', gap: 13, cursor: 'pointer',
++          borderRadius: 18, padding: '14px 16px', marginBottom: 12, color: '#fff',
++          background: `linear-gradient(120deg,${T.bark},#A9822F)`, boxShadow: `0 8px 22px ${T.bark}33` }}>
++          <div style={{ width: 42, height: 42, borderRadius: 12, flexShrink: 0, background: 'rgba(255,255,255,.92)',
++            display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
++            <img src="assets/qurani/bookmark.png" alt="" style={{ width: 24, height: 24, display: 'block' }} />
++          </div>
++          <div style={{ flex: 1, minWidth: 0 }}>
++            <div style={{ fontFamily: T.fBody, fontSize: 12, opacity: .85, fontWeight: 600 }}>{window.t('qp_menu_goto')}</div>
++            <div style={{ fontFamily: T.fHead, fontSize: 17, fontWeight: 700 }}>{window.tf('qp_page_of', { n: window.tnum(pageBookmark) })}</div>
++          </div>
++          <Icon name="chevronL" size={20} color="#fff" />
++        </div>
++      )}
++
+       {/* مدخل الختمات */}
+       <div onClick={onOpenKhatmat} className="afn-tap" style={{ display: 'flex', alignItems: 'center', gap: 13, cursor: 'pointer',
+         borderRadius: 18, padding: '14px 16px', marginBottom: 16, background: T.card, border: `1px solid ${T.line}`,
+@@ -1737,7 +1754,436 @@
+   );
+ }
+ 
+-function QuranScreen({ active, openSurah, jumpAyah, onOpenSurah, onCloseSurah, fontScale, qiraah, translation, bookmark, onBookmark, saved, setSaved, seenIntro, onSeenIntro, khatmat, setKhatmat, userName }) {
++// ════════════════════════════════════════════════════════════════════════
++// نظام صفحات المصحف — عرضٌ صفحةً صفحة مطابقٌ لمصحف المدينة (٦٠٤ صفحات)
++// التوزيع السطريّ مأخوذ من بيانات مصحف المدينة (QPC) عبر quran.com:
++//   verses/by_page → كلماتٌ موسومةٌ برقم السطر، فيُعاد بناء أسطر الصفحة كما طُبعت
++// ════════════════════════════════════════════════════════════════════════
++
++// صفحة بداية كلّ سورة في مصحف المدينة (الفهرس المعتمد ١–١١٤)
++const SURAH_START_PAGE = [0,
++  1,2,50,77,106,128,151,177,187,208,221,235,249,255,262,267,282,293,305,312,
++  322,332,342,350,359,367,377,385,396,404,411,415,418,428,434,440,446,453,458,467,
++  477,483,489,496,499,502,507,511,515,518,520,523,526,528,531,534,537,542,545,549,
++  551,553,554,556,558,560,562,564,566,568,570,572,574,575,577,578,580,582,583,585,
++  586,587,587,589,590,591,591,592,593,594,595,595,596,596,597,597,598,598,599,599,
++  600,600,601,601,601,602,602,602,603,603,603,604,604,604];
++const MUSHAF_LAST_PAGE = 604;
++
++const _pageCache = {};   // page → نموذج الصفحة المبنيّ
++// يبني نموذج صفحةٍ من آيات quran.com: أسطرٌ مرتّبة + بدايات السور + نصوص الآيات
++function buildPageModel(verses, pageNum) {
++  const lineMap = {};            // رقم السطر → عناصر السطر
++  const surahStartLine = {};     // رقم السورة → أوّل سطرٍ تظهر فيه
++  const surahLastLine = {};      // رقم السورة → آخر سطرٍ تنتهي عنده (لتوسيط السطر الأخير)
++  const verseText = {};          // مفتاح الآية → نصّها كاملاً (للحفظ والتفسير)
++  let juz = verses && verses[0] ? verses[0].juz_number : null;
++  let minLine = 99, maxLine = 0;
++  (verses || []).forEach(v => {
++    const ch = v.chapter_id, vno = v.verse_number;
++    const words = v.words || [];
++    const textWords = words.filter(w => w.char_type_name === 'word');
++    verseText[ch + ':' + vno] = textWords.map(w => w.text_uthmani || '').join(' ');
++    let colored;
++    try { colored = colorizeAyah(textWords.map(w => ({ t: w.text_uthmani || '' }))); }
++    catch (e) { colored = textWords.map(w => [{ t: w.text_uthmani || '', c: TJ.base }]); }
++    let wi = 0;
++    words.forEach(w => {
++      const ln = w.line_number || 1;
++      if (ln < minLine) minLine = ln;
++      if (ln > maxLine) maxLine = ln;
++      (lineMap[ln] || (lineMap[ln] = []));
++      if (w.char_type_name === 'word') {
++        lineMap[ln].push({ type: 'word', ch, vno, seg: colored[wi] || [{ t: w.text_uthmani || '', c: TJ.base }] });
++        wi++;
++      } else if (w.char_type_name === 'end') {
++        lineMap[ln].push({ type: 'end', ch, vno });
++      }
++      surahLastLine[ch] = Math.max(surahLastLine[ch] || 0, ln);
++    });
++    if (vno === 1) {
++      const fl = Math.min.apply(null, words.map(w => w.line_number || 99));
++      surahStartLine[ch] = fl;
++    }
++  });
++  // أسطرٌ ينبغي توسيطها: آخر سطرٍ لسورةٍ انتهت فعلاً داخل هذه الصفحة
++  const centerLines = new Set();
++  (verses || []).forEach(v => {
++    const meta = SURAH_INDEX[v.chapter_id - 1];
++    if (meta && v.verse_number === meta.ayahs) centerLines.add(surahLastLine[v.chapter_id]);
++  });
++  const lines = [];
++  for (let ln = minLine; ln <= maxLine; ln++) {
++    if (!lineMap[ln] || !lineMap[ln].length) continue;
++    // سورةٌ تبدأ عند هذا السطر؟ أدرِج لافتةَ الاسم (والبسملة) قبله
++    let startCh = null;
++    for (const k in surahStartLine) if (surahStartLine[k] === ln) startCh = +k;
++    lines.push({ n: ln, items: lineMap[ln], center: centerLines.has(ln), startCh });
++  }
++  return { pageNum, juz, lines, verseText };
++}
++async function fetchMushafPage(p) {
++  if (_pageCache[p]) return _pageCache[p];
++  const url = 'https://api.quran.com/api/v4/verses/by_page/' + p +
++    '?words=true&word_fields=line_number,text_uthmani,char_type_name' +
++    '&fields=text_uthmani,verse_number,chapter_id,juz_number,page_number&per_page=400';
++  const res = await fetch(url);
++  if (!res.ok) throw new Error('page fetch failed');
++  const data = await res.json();
++  const model = buildPageModel(data.verses || [], p);
++  _pageCache[p] = model;
++  return model;
++}
++
++// لافتة اسم السورة — إطارٌ زخرفيّ علويّ على غرار المصحف الشريف
++function SurahBanner({ name }) {
++  return (
++    <div style={{ display: 'flex', justifyContent: 'center', margin: '6px 0 2px' }}>
++      <svg viewBox="0 0 400 64" width="100%" height="58" preserveAspectRatio="xMidYMid meet" style={{ maxWidth: 460, display: 'block' }}>
++        <rect x="6" y="10" width="388" height="44" rx="9" fill="#FBF4DF" stroke={T.green} strokeWidth="1.6" />
++        <rect x="11" y="15" width="378" height="34" rx="6" fill="none" stroke={T.gold} strokeWidth="0.9" />
++        {/* وريدات زخرفية على الطرفين */}
++        {[26, 374].map((cx, i) => (
++          <g key={i} fill="none" stroke={T.green} strokeWidth="1.2">
++            <path d={`M${cx} 19 C${cx - 8} 25 ${cx - 8} 39 ${cx} 45 C${cx + 8} 39 ${cx + 8} 25 ${cx} 19 Z`} fill="#EAF1E4" />
++            <circle cx={cx} cy="32" r="2.4" fill={T.gold} stroke="none" />
++          </g>
++        ))}
++        <text x="200" y="39" textAnchor="middle" fill={T.green}
++          style={{ font: '700 22px "Aref Ruqaa", serif' }}>سورة {name}</text>
++      </svg>
++    </div>
++  );
++}
++
++function MushafPageReader({ startPage, onExitIndex, onGoHome, fontScale, translation,
++  pageBookmark, onSetPageBookmark, saved, onToggleSaved }) {
++  const clampPage = (p) => Math.max(1, Math.min(MUSHAF_LAST_PAGE, p));
++  const [page, setPage] = React.useState(clampPage(startPage || 1));
++  const [model, setModel] = React.useState(_pageCache[clampPage(startPage || 1)] || null);
++  const [loading, setLoading] = React.useState(!_pageCache[clampPage(startPage || 1)]);
++  const [error, setError] = React.useState(false);
++  const [menu, setMenu] = React.useState(false);        // الواجهة العائمة (ضغطة واحدة)
++  const [ayahMenu, setAyahMenu] = React.useState(null); // قائمة الآية (ضغط مطوّل) {ch,vno,x,y}
++  const [tafsir, setTafsir] = React.useState(null);
++  const [toast, setToast] = React.useState(null);
++  const rootRef = React.useRef(null);
++  const toastTid = React.useRef(0);
++  const showToast = (m) => { setToast(m); clearTimeout(toastTid.current); toastTid.current = setTimeout(() => setToast(null), 2000); };
++  const fontSize = Math.round(23 * (fontScale || 1));
++
++  // جلب الصفحة + تحميل مسبق للجارتين
++  React.useEffect(() => {
++    let alive = true;
++    if (_pageCache[page]) { setModel(_pageCache[page]); setLoading(false); setError(false); }
++    else { setLoading(true); setError(false); setModel(null);
++      fetchMushafPage(page).then(m => { if (alive) { setModel(m); setLoading(false); } })
++        .catch(() => { if (alive) { setError(true); setLoading(false); } });
++    }
++    [page - 1, page + 1].forEach(p => { if (p >= 1 && p <= MUSHAF_LAST_PAGE && !_pageCache[p]) fetchMushafPage(p).catch(() => {}); });
++    return () => { alive = false; };
++  }, [page]);
++
++  const go = (delta) => { setMenu(false); setAyahMenu(null); setTafsir(null); setPage(p => clampPage(p + delta)); };
++
++  // الآيات المحفوظة على هذه الصفحة
++  const savedSet = React.useMemo(() => {
++    const s = new Set(); (saved || []).forEach(b => s.add(b.surah + ':' + b.ayah)); return s;
++  }, [saved]);
++
++  // التمييز بين النقرة والسحب والضغط المطوّل
++  const tap = React.useRef({ x: 0, y: 0, t: 0 });
++  const lp = React.useRef({ tid: 0, x: 0, y: 0, fired: false });
++  const startLP = (ch, vno, e) => {
++    const px = e.clientX, py = e.clientY;
++    clearTimeout(lp.current.tid);
++    lp.current = { x: px, y: py, fired: false, tid: setTimeout(() => {
++      lp.current.fired = true;
++      const host = rootRef.current ? rootRef.current.getBoundingClientRect() : { left: 0, top: 0 };
++      setMenu(false);
++      setAyahMenu({ ch, vno, x: px - host.left, y: py - host.top });
++      try { navigator.vibrate && navigator.vibrate(9); } catch (er) {}
++    }, 430) };
++  };
++  const moveLP = (e) => { if (Math.abs(e.clientX - lp.current.x) > 11 || Math.abs(e.clientY - lp.current.y) > 11) clearTimeout(lp.current.tid); };
++  const endLP = () => clearTimeout(lp.current.tid);
++
++  const onDown = (e) => { tap.current = { x: e.clientX, y: e.clientY, t: Date.now() }; };
++  const onUp = (e) => {
++    const s = tap.current;
++    const dx = e.clientX - s.x, dy = e.clientY - s.y, dt = Date.now() - s.t;
++    if (lp.current.fired) { lp.current.fired = false; return; }
++    if (menu || ayahMenu || tafsir) return;       // الطبقات العائمة تُغلَق بنفسها عبر خلفيّتها
++    const horiz = Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.4 && dt < 700;
++    if (horiz) { go(dx < 0 ? 1 : -1); return; }   // سحبٌ لليسار ← الصفحة التالية (اتجاه المصحف)
++    if (Math.abs(dx) < 10 && Math.abs(dy) < 10 && dt < 360) setMenu(true);
++  };
++
++  // التفسير/الترجمة لآية (يُعاد استعمال مصادر النظام الحالي)
++  const openTafsir = (ch, vno) => {
++    setAyahMenu(null); setMenu(false);
++    const tr = transByKey(translation);
++    setTafsir({ ch, vno, text: null, loading: true, error: false,
++      trans: tr.id ? { loading: true, text: null, error: false } : null });
++    fetchTafsir(ch, vno)
++      .then(text => setTafsir(t => (t && t.ch === ch && t.vno === vno ? { ...t, text, loading: false } : t)))
++      .catch(() => setTafsir(t => (t && t.ch === ch && t.vno === vno ? { ...t, loading: false, error: true } : t)));
++    if (tr.id) {
++      fetchTranslation(tr.id, ch)
++        .then(arr => setTafsir(t => (t && t.ch === ch && t.vno === vno ? { ...t, trans: { ...t.trans, text: arr[vno - 1] || '', loading: false } } : t)))
++        .catch(() => setTafsir(t => (t && t.ch === ch && t.vno === vno ? { ...t, trans: { ...t.trans, loading: false, error: true } } : t)));
++    }
++  };
++  const saveAyah = (ch, vno) => {
++    const was = savedSet.has(ch + ':' + vno);
++    const txt = model && model.verseText ? model.verseText[ch + ':' + vno] : '';
++    onToggleSaved && onToggleSaved(ch, vno, txt);
++    setAyahMenu(null);
++    showToast(was ? 'أُزيلت الآية من المحفوظات' : 'حُفِظت الآية في المحفوظات');
++  };
++
++  const verseTextOf = (ch, vno) => (model && model.verseText ? model.verseText[ch + ':' + vno] : '') || '';
++  const isBookmarked = pageBookmark === page;
++
++  return (
++    <div ref={rootRef} onPointerDown={onDown} onPointerUp={onUp} onPointerCancel={() => { lp.current.fired = false; }}
++      style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', background: '#FCFAF3',
++        overflow: 'hidden', WebkitUserSelect: 'none', userSelect: 'none' }}>
++
++      {/* شريط علامة الصفحة المحفوظة — يظهر في بداية الصفحة المعلَّمة فقط */}
++      {isBookmarked && (
++        <div style={{ position: 'absolute', top: 0, insetInlineStart: 22, zIndex: 8, pointerEvents: 'none' }}>
++          <svg width="26" height="40" viewBox="0 0 26 40">
++            <path d="M0 0h26v40l-13-9-13 9V0Z" fill={T.gold} stroke="#A9822F" strokeWidth="1" />
++            <path d="M13 9l3.2 6.5 7.1 1-5.1 5 1.2 7.1L13 31.3 6.6 34.6l1.2-7.1-5.1-5 7.1-1L13 9Z" fill="#FBF4DF" opacity="0.55" />
++          </svg>
++        </div>
++      )}
++
++      <div className="afn-scroll" style={{ flex: 1, minHeight: 0, overflowY: 'auto', overflowX: 'hidden',
++        padding: '42px 18px 26px', display: 'flex', flexDirection: 'column' }}>
++        {loading && (
++          <div style={{ margin: 'auto', textAlign: 'center', padding: '60px 20px' }}>
++            <div style={{ display: 'inline-flex', gap: 7 }}>
++              {[0,1,2].map(i => <span key={i} style={{ width: 11, height: 11, borderRadius: '50%', background: T.green2,
++                animation: `afn-pulse 1s ease-in-out ${i*0.2}s infinite` }} />)}
++            </div>
++            <div style={{ fontFamily: T.fBody, fontSize: 14.5, color: T.inkMuted, marginTop: 18 }}>{window.t('qp_loading')}</div>
++          </div>
++        )}
++        {error && (
++          <div style={{ margin: 'auto', textAlign: 'center', padding: '60px 24px' }}>
++            <Icon name="book" size={40} color={T.mintEdge} />
++            <div style={{ fontFamily: T.fHead, fontSize: 17, fontWeight: 600, color: T.ink, marginTop: 14 }}>{window.t('qp_err')}</div>
++            <div style={{ fontFamily: T.fBody, fontSize: 13.5, color: T.inkMuted, marginTop: 6 }}>{window.t('q_err_check')}</div>
++            <button onClick={() => { delete _pageCache[page]; setError(false); setLoading(true);
++              fetchMushafPage(page).then(m => { setModel(m); setLoading(false); }).catch(() => { setError(true); setLoading(false); }); }}
++              className="afn-tap" style={{ marginTop: 18, border: 'none', cursor: 'pointer', padding: '11px 24px', borderRadius: 14,
++              fontFamily: T.fHead, fontSize: 15, fontWeight: 700, background: T.green, color: '#fff' }}>{window.t('btn_retry')}</button>
++          </div>
++        )}
++
++        {!loading && !error && model && (
++          <div key={page} style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center',
++            animation: 'afn-fade .25s ease both', maxWidth: 560, width: '100%', margin: '0 auto' }}>
++            {model.lines.map((ln, li) => {
++              const startCh = ln.startCh;
++              const meta = startCh ? SURAH_INDEX[startCh - 1] : null;
++              return (
++                <React.Fragment key={li}>
++                  {meta && <SurahBanner name={window.surahName(startCh, meta.name)} />}
++                  {meta && startCh !== 1 && startCh !== 9 && (
++                    <div style={{ textAlign: 'center', padding: '4px 30px 6px' }}>
++                      <img src="assets/zakharif/basmala.png" alt="بسم الله الرحمن الرحيم"
++                        style={{ width: '64%', maxWidth: 240, height: 'auto', display: 'block', margin: '0 auto', opacity: 0.9 }} />
++                    </div>
++                  )}
++                  <p dir="rtl" style={{ margin: 0, fontFamily: T.fQuran, fontSize: fontSize,
++                    lineHeight: page === 1 ? 2.5 : 2.05, color: TJ.base,
++                    textAlign: ln.center ? 'center' : 'justify',
++                    textAlignLast: ln.center ? 'center' : 'justify', whiteSpace: 'normal' }}>
++                    {ln.items.map((it, ii) => {
++                      if (it.type === 'end') {
++                        const active = savedSet.has(it.ch + ':' + it.vno);
++                        return <AyahMark key={ii} n={it.vno} size={fontSize} active={active} onTap={() => {}} />;
++                      }
++                      const active = savedSet.has(it.ch + ':' + it.vno);
++                      return (
++                        <React.Fragment key={ii}>
++                          <span style={active ? { background: 'rgba(201,162,75,.14)', borderRadius: 5 } : null}>
++                            <Word seg={it.seg} active={false} onTap={() => {}}
++                              onPressStart={(e) => startLP(it.ch, it.vno, e)} onPressMove={moveLP} onPressEnd={endLP} />
++                          </span>
++                          {' '}
++                        </React.Fragment>
++                      );
++                    })}
++                  </p>
++                </React.Fragment>
++              );
++            })}
++            {/* رقم الصفحة والجزء أسفلها — كالمصحف */}
++            <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '20px auto 0', maxWidth: 320, width: '100%' }}>
++              <span style={{ flex: 1, height: 1, background: T.goldSoft }} />
++              <span style={{ fontFamily: T.fHead, fontSize: 14, fontWeight: 700, color: T.green }}>{window.tnum(page)}</span>
++              {model.juz && <React.Fragment>
++                <span style={{ width: 3, height: 3, borderRadius: 99, background: T.gold }} />
++                <span style={{ fontFamily: T.fBody, fontSize: 10.5, fontWeight: 700, color: T.bark }}>{window.t('q_juz')} {window.AFN_LANG === 'ar' ? JUZ_NAMES[model.juz] : window.tnum(model.juz)}</span>
++              </React.Fragment>}
++              <span style={{ flex: 1, height: 1, background: T.goldSoft }} />
++            </div>
++          </div>
++        )}
++      </div>
++
++      {/* قائمة الآية — الضغط المطوّل */}
++      {ayahMenu && (() => {
++        const W = rootRef.current ? rootRef.current.clientWidth : 380;
++        const cx = Math.min(W - 130, Math.max(130, ayahMenu.x));
++        const top = ayahMenu.y - 8 < 150 ? ayahMenu.y + 24 : ayahMenu.y - 8;
++        const isSaved = savedSet.has(ayahMenu.ch + ':' + ayahMenu.vno);
++        const Item = ({ label, onClick, soon, danger }) => (
++          <button onClick={(e) => { e.stopPropagation(); onClick(); }} className="afn-tap"
++            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 14, width: '100%',
++              border: 'none', borderBottom: `1px solid ${T.line}`, background: 'transparent', cursor: 'pointer',
++              padding: '12px 16px', fontFamily: T.fHead, fontSize: 15, fontWeight: 700,
++              color: danger ? '#B5482F' : T.ink }}>
++            <span>{label}</span>
++            {soon && <span style={{ fontFamily: T.fBody, fontSize: 11, fontWeight: 700, color: '#fff',
++              background: T.gold, borderRadius: 99, padding: '2px 9px' }}>{window.t('qp_soon')}</span>}
++          </button>
++        );
++        return (
++          <div onClick={() => setAyahMenu(null)} style={{ position: 'absolute', inset: 0, zIndex: 60 }}>
++            <div onClick={(e) => e.stopPropagation()} style={{ position: 'absolute', left: cx, top, transform: 'translateX(-50%)',
++              width: 240, background: '#fff', borderRadius: 16, overflow: 'hidden', direction: 'rtl',
++              boxShadow: '0 14px 40px rgba(20,40,32,.3)', animation: 'afn-fade .15s ease both' }}>
++              <div style={{ padding: '9px 16px', background: T.mint, fontFamily: T.fBody, fontSize: 12, fontWeight: 700, color: T.green }}>
++                {window.t('q_surah')} {window.surahName(ayahMenu.ch, (SURAH_INDEX[ayahMenu.ch-1]||{}).name)} · {window.t('q_verses') && ('آية ' + window.tnum(ayahMenu.vno))}
++              </div>
++              <Item label={window.t('qa_translation')} onClick={() => openTafsir(ayahMenu.ch, ayahMenu.vno)} />
++              <Item label={window.t('qa_tafsir')} onClick={() => openTafsir(ayahMenu.ch, ayahMenu.vno)} />
++              <Item label={isSaved ? window.t('qa_unsave') : window.t('qa_save')} danger={isSaved} onClick={() => saveAyah(ayahMenu.ch, ayahMenu.vno)} />
++              <Item label={window.t('qa_read')} soon onClick={() => { setAyahMenu(null); showToast(window.t('qp_soon_msg')); }} />
++            </div>
++          </div>
++        );
++      })()}
++
++      {/* الواجهة العائمة — ضغطة واحدة */}
++      {menu && (
++        <div onClick={() => setMenu(false)} style={{ position: 'absolute', inset: 0, zIndex: 55,
++          background: 'rgba(20,38,30,.34)', display: 'flex', alignItems: 'center', justifyContent: 'center',
++          animation: 'afn-fade .18s ease both', padding: 20 }}>
++          <div onClick={(e) => e.stopPropagation()} style={{ width: '100%', maxWidth: 330, background: '#fff',
++            borderRadius: 22, overflow: 'hidden', direction: 'rtl', boxShadow: '0 18px 50px rgba(20,40,32,.34)' }}>
++            <div style={{ padding: '16px 18px', background: 'linear-gradient(180deg,#16614A,#11533E)', color: '#fff', textAlign: 'center' }}>
++              <div style={{ fontFamily: T.fHead, fontSize: 18, fontWeight: 700 }}>{window.tf('qp_page_of', { n: window.tnum(page) })}</div>
++            </div>
++            {[
++              { label: window.t('qp_menu_index'), onClick: () => { setMenu(false); onExitIndex && onExitIndex(); } },
++              { label: window.t('qp_menu_home'), onClick: () => { setMenu(false); onGoHome && onGoHome(); } },
++              { label: window.t('qp_menu_bm'), onClick: () => { setMenu(false); onSetPageBookmark && onSetPageBookmark(page); showToast(window.t('qp_bm_set')); } },
++              { label: window.t('qp_menu_goto'), onClick: () => { setMenu(false); if (pageBookmark) setPage(clampPage(pageBookmark)); else showToast(window.t('qp_no_bm')); } },
++              { label: window.t('qp_menu_read'), soon: true, onClick: () => { setMenu(false); showToast(window.t('qp_soon_msg')); } },
++            ].map((row, i, arr) => (
++              <button key={i} onClick={row.onClick} className="afn-tap"
++                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, width: '100%',
++                  border: 'none', borderBottom: i < arr.length - 1 ? `1px solid ${T.line}` : 'none', background: 'transparent',
++                  cursor: 'pointer', padding: '15px 18px', fontFamily: T.fHead, fontSize: 15.5, fontWeight: 700, color: T.ink }}>
++                <span>{row.label}</span>
++                {row.soon && <span style={{ fontFamily: T.fBody, fontSize: 11, fontWeight: 700, color: '#fff',
++                  background: T.gold, borderRadius: 99, padding: '2px 9px' }}>{window.t('qp_soon')}</span>}
++              </button>
++            ))}
++          </div>
++        </div>
++      )}
++
++      {/* لوح التفسير/الترجمة — يُعاد استعماله من نظام السور */}
++      {tafsir && (() => {
++        const tr = transByKey(translation);
++        const vt = verseTextOf(tafsir.ch, tafsir.vno);
++        return (
++          <>
++            <div onClick={() => setTafsir(null)} style={{ position: 'absolute', inset: 0, zIndex: 65, background: 'rgba(20,40,32,.28)', animation: 'afn-fade .2s ease both' }} />
++            <div className="afn-rise" style={{ position: 'absolute', left: 0, right: 0, bottom: 0, zIndex: 70,
++              background: '#fff', borderTopLeftRadius: 26, borderTopRightRadius: 26, padding: '20px 20px 30px',
++              boxShadow: '0 -10px 40px rgba(38,53,45,.22)', maxHeight: '74%', display: 'flex', flexDirection: 'column', direction: 'rtl' }}>
++              <div style={{ width: 42, height: 5, borderRadius: 99, background: T.mintEdge, margin: '0 auto 16px' }} />
++              <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
++                <div style={{ width: 46, height: 46, borderRadius: 14, background: T.mint, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
++                  <Icon name="book" size={23} color={T.green} />
++                </div>
++                <div style={{ flex: 1 }}>
++                  <div style={{ fontFamily: T.fHead, fontSize: 18, fontWeight: 700, color: T.ink }}>{window.t('q_surah')} {window.surahName(tafsir.ch, (SURAH_INDEX[tafsir.ch-1]||{}).name)} · {window.tf('q_tafsir_for', { n: window.tnum(tafsir.vno) })}</div>
++                  <div style={{ fontFamily: T.fBody, fontSize: 12.5, color: T.gold, fontWeight: 600 }}>{window.t('q_tafsir_name')}</div>
++                </div>
++                <div onClick={() => setTafsir(null)} className="afn-tap" style={{ width: 32, height: 32, borderRadius: '50%', background: T.bgSink, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
++                  <Icon name="close" size={17} color={T.inkSoft} stroke={2.2} />
++                </div>
++              </div>
++              {vt && (
++                <div style={{ background: 'linear-gradient(160deg,#F3F8EF,#fff)', borderRadius: 16, padding: '14px 16px', marginBottom: 14, border: `1px solid ${T.line}` }}>
++                  <p dir="rtl" style={{ margin: 0, fontFamily: T.fScript, fontSize: 22, lineHeight: 2, color: T.green, textAlign: 'center', fontWeight: 700 }}>﴿ {vt} ﴾</p>
++                </div>
++              )}
++              <div className="afn-scroll" style={{ overflowY: 'auto', flex: 1 }}>
++                {tafsir.trans && (
++                  <div style={{ marginBottom: 16, paddingBottom: 16, borderBottom: `1px solid ${T.line}` }}>
++                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 9 }}>
++                      <span style={{ width: 26, height: 26, borderRadius: 8, background: '#E2EAF4', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
++                        <Icon name="globe" size={15} color="#5C7CA6" />
++                      </span>
++                      <span style={{ fontFamily: T.fHead, fontSize: 14, fontWeight: 700, color: T.ink }}>{tr.native}</span>
++                      <span style={{ fontFamily: T.fBody, fontSize: 11, color: T.inkMuted, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{tr.by}</span>
++                    </div>
++                    {tafsir.trans.loading && (
++                      <div style={{ display: 'inline-flex', gap: 6, padding: '4px 2px' }}>
++                        {[0,1,2].map(i => <span key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: '#5C7CA6', animation: `afn-pulse 1s ease-in-out ${i*0.2}s infinite` }} />)}
++                      </div>
++                    )}
++                    {tafsir.trans.error && <div style={{ fontFamily: T.fBody, fontSize: 13, color: T.inkMuted }}>{window.t('q_err_trans')}</div>}
++                    {tafsir.trans.text && (
++                      <p dir={tr.dir} lang={tr.key} style={{ margin: 0, fontFamily: tr.dir === 'rtl' ? T.fBody : "'Georgia','Times New Roman',serif",
++                        fontSize: 16, lineHeight: 1.85, color: T.inkSoft, textAlign: tr.dir === 'rtl' ? 'right' : 'left' }}>{tafsir.trans.text}</p>
++                    )}
++                  </div>
++                )}
++                {tafsir.loading && (
++                  <div style={{ textAlign: 'center', padding: '24px' }}>
++                    <div style={{ display: 'inline-flex', gap: 6 }}>
++                      {[0,1,2].map(i => <span key={i} style={{ width: 9, height: 9, borderRadius: '50%', background: T.green2, animation: `afn-pulse 1s ease-in-out ${i*0.2}s infinite` }} />)}
++                    </div>
++                    <div style={{ fontFamily: T.fBody, fontSize: 13.5, color: T.inkMuted, marginTop: 14 }}>{window.t('q_load_tafsir')}</div>
++                  </div>
++                )}
++                {tafsir.error && (
++                  <div style={{ textAlign: 'center', padding: '20px' }}>
++                    <div style={{ fontFamily: T.fBody, fontSize: 14, color: T.inkMuted }}>{window.t('q_err_tafsir')}</div>
++                    <button onClick={() => openTafsir(tafsir.ch, tafsir.vno)} className="afn-tap" style={{ marginTop: 14, border: 'none', cursor: 'pointer', padding: '10px 22px', borderRadius: 13, fontFamily: T.fHead, fontSize: 14.5, fontWeight: 700, background: T.green, color: '#fff' }}>{window.t('btn_retry')}</button>
++                  </div>
++                )}
++                {tafsir.text && <p style={{ margin: 0, fontFamily: T.fBody, fontSize: 16.5, lineHeight: 2, color: T.inkSoft }}>{tafsir.text}</p>}
++              </div>
++            </div>
++          </>
++        );
++      })()}
++
++      {toast && (
++        <div style={{ position: 'absolute', bottom: 30, left: '50%', transform: 'translateX(-50%)', zIndex: 80,
++          background: 'rgba(17,83,62,.95)', color: '#fff', padding: '11px 20px', borderRadius: 999, whiteSpace: 'nowrap',
++          fontFamily: T.fBody, fontSize: 13.5, fontWeight: 600, boxShadow: '0 8px 24px rgba(17,83,62,.34)', pointerEvents: 'none', textAlign: 'center' }}>
++          {toast}
++        </div>
++      )}
++    </div>
++  );
++}
++
++function QuranScreen({ active, openSurah, jumpAyah, onOpenSurah, onCloseSurah, fontScale, qiraah, translation, bookmark, onBookmark, saved, setSaved, seenIntro, onSeenIntro, khatmat, setKhatmat, userName,
++  quranView, openPage, onOpenPage, onClosePage, pageBookmark, onSetPageBookmark, onGoHome }) {
+   // prefetch the whole mushaf in the background as soon as the tab opens
+   React.useEffect(() => { ensureAllQuran().catch(() => {}); }, []);
+   const [view, setView] = React.useState('index');     // index | khatmat | saved
+@@ -1752,6 +2198,18 @@
+     return [...(list || []), { surah: s, ayah: a, text: String(text || '').slice(0, 140), savedAt: Date.now() }];
+   });
+ 
++  // فتح سورةٍ من الفهرس: في نظام الصفحات يُفتح المصحف عند صفحة بداية السورة
++  const openFromIndex = (num, ayah) => {
++    if (quranView === 'pages') { onOpenPage && onOpenPage(SURAH_START_PAGE[num] || 1); }
++    else { onOpenSurah(num, ayah); }
++  };
++
++  // نظام صفحات المصحف — القارئ العائم الكامل
++  if (openPage) return <MushafPageReader startPage={openPage} fontScale={fontScale} translation={translation}
++    pageBookmark={pageBookmark} onSetPageBookmark={onSetPageBookmark}
++    saved={saved} onToggleSaved={toggleSaved}
++    onExitIndex={() => onClosePage && onClosePage()} onGoHome={() => { onClosePage && onClosePage(); onGoHome && onGoHome(); }} />;
++
+   if (openSurah) return <SurahReader num={openSurah} jumpAyah={jumpAyah} onBack={onCloseSurah} onNav={onOpenSurah}
+     fontScale={fontScale} qiraah={qiraah} translation={translation} bookmark={bookmark} onBookmark={onBookmark}
+     saved={saved} onToggleSaved={toggleSaved} />;
+@@ -1759,19 +2217,20 @@
+   if (view === 'khatmat' && KS) {
+     return <KS khatmat={khatmat} setKhatmat={setKhatmat} userName={userName} bookmark={bookmark}
+       onExit={() => setView('index')}
+-      onOpenSurah={(s, a) => { setView('index'); onOpenSurah(s, a); }} />;
++      onOpenSurah={(s, a) => { setView('index'); openFromIndex(s, a); }} />;
+   }
+ 
+   if (view === 'saved') {
+     return <SavedScreen saved={saved} setSaved={setSaved} onBack={() => setView('index')}
+-      onOpen={(s, a) => { setView('index'); onOpenSurah(s, a); }} />;
++      onOpen={(s, a) => { setView('index'); openFromIndex(s, a); }} />;
+   }
+ 
+   return (
+     <React.Fragment>
+-      <QuranIndex onOpen={onOpenSurah} onOpenKhatmat={() => setView('khatmat')} onOpenSaved={() => setView('saved')}
++      <QuranIndex onOpen={openFromIndex} onOpenKhatmat={() => setView('khatmat')} onOpenSaved={() => setView('saved')}
+         savedCount={(saved || []).length} qiraah={qiraah}
+-        bookmark={bookmark} onResume={() => bookmark && onOpenSurah(bookmark.surah, bookmark.ayah)} />
++        quranView={quranView} pageBookmark={pageBookmark} onResumePage={() => pageBookmark && onOpenPage && onOpenPage(pageBookmark)}
++        bookmark={bookmark} onResume={() => bookmark && openFromIndex(bookmark.surah, bookmark.ayah)} />
+       {showIntro && <QuranGuide onClose={() => setShowIntro(false)}
+         onDontShow={() => { setShowIntro(false); onSeenIntro && onSeenIntro(); }} />}
+     </React.Fragment>

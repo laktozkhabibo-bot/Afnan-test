@@ -387,6 +387,11 @@ function SettingsScreen({ state, onChange, onAdhan }) {
         {/* recitation */}
         <SectionLabel>{t('st_qurani')}</SectionLabel>
         <Card style={{ overflow: 'hidden' }}>
+          <SelectRow icon="book" tint="#E0EFE6" glyph={T.green} img="assets/settings/click.png" title={t('st_quran_view')}
+            value={(state.quranView || 'surah') === 'pages' ? t('qv_pages') : t('qv_surah')}
+            onClick={() => setSheet({ title: t('st_quran_view'),
+              options: [t('qv_surah'), t('qv_pages')], value: (state.quranView || 'surah') === 'pages' ? t('qv_pages') : t('qv_surah'),
+              onPick: (v) => { onChange({ quranView: v === t('qv_pages') ? 'pages' : 'surah' }); setSheet(null); } })} />
           <SelectRow icon="book" tint="#E0EFE6" glyph={T.green} img="assets/settings/qiraat.png" title={t('st_qiraat')} value={state.qiraah || QIRAAH_DEFAULT}
             stacked onClick={() => setQSheet(true)} />
           <SelectRow icon="quote" tint="#F0E0D2" glyph={T.clay} img="assets/settings/qari.png" title={t('st_reciter')} value={state.reciter || RECITERS[0]}

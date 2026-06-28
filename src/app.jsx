@@ -28,7 +28,9 @@ function seedState() {
     qiraah: 'حفص عن عاصم',
     translation: 'none',
     fontScale: 1,
+    quranView: 'surah',     // 'surah' = نظام السور · 'pages' = صفحات المصحف
     bookmark: null,
+    pageBookmark: null,     // علامة صفحة المصحف (مرتبطة برقم الصفحة)
     saved: [],
     seenQuranIntro: false,
     dontShowQuranIntro: false,
@@ -59,6 +61,7 @@ function App() {
   const [st, setSt] = useState(loadState);
   const [surah, setSurah] = useState(null);     // open surah number
   const [jumpAyah, setJumpAyah] = useState(null); // optional ayah to scroll to
+  const [mushafPage, setMushafPage] = useState(null); // open mushaf page (نظام صفحات المصحف)
   const [cat, setCat] = useState(null);         // open adhkar category
   const [hadithSheet, setHadithSheet] = useState(null); // حديث الشرح المفتوح
   const [showWelcome, setShowWelcome] = useState(() => { try { const s = JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); return !!s.lang && !s.dontShowWelcome; } catch (e) { return false; } });
@@ -93,6 +96,8 @@ function App() {
   const update = (patch) => setSt(s => ({ ...s, ...patch }));
   const openSurah = (num, ayah = null) => { setSurah(num); setJumpAyah(ayah || null); };
   const closeSurah = () => { setSurah(null); setJumpAyah(null); };
+  const openMushafPage = (p) => setMushafPage(p || 1);
+  const closeMushafPage = () => setMushafPage(null);
   const setKhatmat = (updater) => setSt(s => ({ ...s, khatmat: typeof updater === 'function' ? updater(s.khatmat || []) : updater }));
   const setSaved = (updater) => setSt(s => ({ ...s, saved: typeof updater === 'function' ? updater(s.saved || []) : updater }));
 
@@ -110,6 +115,10 @@ function App() {
           qiraah={st.qiraah || 'حفص عن عاصم'}
           translation={st.translation || 'none'}
           bookmark={st.bookmark} onBookmark={(bm) => update({ bookmark: bm })}
+          quranView={st.quranView || 'surah'}
+          openPage={mushafPage} onOpenPage={openMushafPage} onClosePage={closeMushafPage}
+          pageBookmark={st.pageBookmark || null} onSetPageBookmark={(p) => update({ pageBookmark: p })}
+          onGoHome={() => setTab('home')}
           saved={st.saved || []} setSaved={setSaved}
           seenIntro={!!st.dontShowQuranIntro} onSeenIntro={() => update({ dontShowQuranIntro: true })}
           khatmat={st.khatmat || []} setKhatmat={setKhatmat} userName={st.name} />
@@ -137,11 +146,11 @@ function App() {
         <window.WelcomeSheet onClose={() => { update({ dontShowWelcome: true }); setShowWelcome(false); }} />
       )}
 
-      {/* hide tab bar inside immersive sub-views (surah reader) */}
-      {!(tab === 'quran' && surah) && (
+      {/* hide tab bar inside immersive sub-views (surah reader · mushaf page reader) */}
+      {!(tab === 'quran' && (surah || mushafPage)) && (
         <TabBar active={tab} onChange={(t) => { setTab(t);
           if (t !== 'adhkar') setCat(null);
-          if (t !== 'quran') setSurah(null);
+          if (t !== 'quran') { setSurah(null); setMushafPage(null); }
         }} />
       )}
     </div>

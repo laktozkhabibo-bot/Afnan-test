@@ -1,0 +1,32 @@
+diff a/src/data/i18n.jsx b/src/data/i18n.jsx	(rejected hunks)
+@@ -192,6 +192,30 @@
+   q_err_trans:   { ar: 'تعذّر تحميل الترجمة — تحقّق من اتصالك', en: 'Could not load translation — check your connection', tr: 'Çeviri yüklenemedi — bağlantını kontrol et', ur: 'ترجمہ لوڈ نہ ہوا — کنکشن چیک کریں', id: 'Gagal memuat terjemahan — periksa koneksi' },
+   btn_retry:     { ar: 'إعادة المحاولة', en: 'Try again', tr: 'Tekrar dene', ur: 'دوبارہ کوشش', id: 'Coba lagi' },
+ 
++  // ── نظام صفحات المصحف ──
++  st_quran_view: { ar: 'نظام عرض القرآن', en: 'Quran display mode', tr: "Kur'an görünümü", ur: 'قرآن کا اندازِ نمائش', id: 'Mode tampilan Quran' },
++  qv_surah:      { ar: 'نظام السور', en: 'By surah', tr: 'Sûre düzeni', ur: 'سورت کے اعتبار سے', id: 'Per surah' },
++  qv_pages:      { ar: 'صفحات المصحف', en: 'Mushaf pages', tr: 'Mushaf sayfaları', ur: 'مصحف کے صفحات', id: 'Halaman mushaf' },
++  qv_surah_sub:  { ar: 'تقرأ كلَّ سورة كاملةً بالتمرير', en: 'Read each surah by scrolling', tr: 'Her sureyi kaydırarak oku', ur: 'ہر سورت اسکرول کر کے پڑھیں', id: 'Baca tiap surah dengan menggulir' },
++  qv_pages_sub:  { ar: 'تصفّح القرآن صفحةً صفحة كالمصحف المطبوع', en: 'Browse page by page like the printed mushaf', tr: 'Basılı mushaf gibi sayfa sayfa gez', ur: 'چھپے مصحف کی طرح صفحہ بہ صفحہ', id: 'Telusuri halaman demi halaman seperti mushaf' },
++  qp_loading:    { ar: 'تُحمّل صفحة المصحف…', en: 'Loading mushaf page…', tr: 'Mushaf sayfası yükleniyor…', ur: 'مصحف کا صفحہ لوڈ ہو رہا ہے…', id: 'Memuat halaman mushaf…' },
++  qp_err:        { ar: 'تعذّر تحميل الصفحة', en: 'Could not load the page', tr: 'Sayfa yüklenemedi', ur: 'صفحہ لوڈ نہ ہو سکا', id: 'Gagal memuat halaman' },
++  qp_menu_index: { ar: 'الرجوع إلى الفهرس', en: 'Back to index', tr: 'Fihriste dön', ur: 'فہرست پر واپس', id: 'Kembali ke indeks' },
++  qp_menu_home:  { ar: 'الصفحة الرئيسية', en: 'Home', tr: 'Ana sayfa', ur: 'مرکزی صفحہ', id: 'Beranda' },
++  qp_menu_bm:    { ar: 'وضع علامة', en: 'Set bookmark', tr: 'Yer imi koy', ur: 'نشان لگائیں', id: 'Tandai halaman' },
++  qp_menu_goto:  { ar: 'الانتقال إلى العلامة', en: 'Go to bookmark', tr: 'Yer imine git', ur: 'نشان پر جائیں', id: 'Ke tanda' },
++  qp_menu_read:  { ar: 'قراءة الصفحة كاملة', en: 'Recite full page', tr: 'Sayfayı sesli oku', ur: 'پورا صفحہ پڑھیں', id: 'Baca seluruh halaman' },
++  qp_soon:       { ar: 'قريباً', en: 'Soon', tr: 'Yakında', ur: 'جلد', id: 'Segera' },
++  qp_soon_msg:   { ar: 'ستتوفّر القراءة الصوتية قريبًا بإذن الله', en: 'Audio recitation will be available soon', tr: 'Sesli okuma yakında eklenecek', ur: 'صوتی تلاوت جلد دستیاب ہوگی', id: 'Tilawah audio segera tersedia' },
++  qp_bm_set:     { ar: 'وُضِعت علامة على هذه الصفحة', en: 'Page bookmarked', tr: 'Sayfa yer imine eklendi', ur: 'صفحہ نشان زدہ', id: 'Halaman ditandai' },
++  qp_no_bm:      { ar: 'لا توجد علامة محفوظة بعد', en: 'No bookmark saved yet', tr: 'Henüz yer imi yok', ur: 'ابھی کوئی نشان نہیں', id: 'Belum ada tanda' },
++  qp_page_of:    { ar: 'صفحة {n}', en: 'Page {n}', tr: 'Sayfa {n}', ur: 'صفحہ {n}', id: 'Halaman {n}' },
++  qa_translation:{ ar: 'الترجمة', en: 'Translation', tr: 'Çeviri', ur: 'ترجمہ', id: 'Terjemahan' },
++  qa_tafsir:     { ar: 'التفسير', en: 'Tafsir', tr: 'Tefsir', ur: 'تفسیر', id: 'Tafsir' },
++  qa_save:       { ar: 'حفظ الآية', en: 'Save verse', tr: 'Ayeti kaydet', ur: 'آیت محفوظ کریں', id: 'Simpan ayat' },
++  qa_unsave:     { ar: 'إزالة الآية', en: 'Remove verse', tr: 'Ayeti kaldır', ur: 'آیت ہٹائیں', id: 'Hapus ayat' },
++  qa_read:       { ar: 'قراءة الآية', en: 'Recite verse', tr: 'Ayeti oku', ur: 'آیت پڑھیں', id: 'Baca ayat' },
++
+   // ── الأذكار ──
+   ad_sub:        { ar: 'حصِّنْ يومك بالأذكار', en: 'Fortify your day with adhkar', tr: 'Gününü zikirlerle güçlendir', ur: 'اپنا دن اذکار سے محفوظ کریں', id: 'Perkuat harimu dengan zikir' },
+   ad_count:      { ar: '{n} ذكرًا', en: '{n} adhkar', tr: '{n} zikir', ur: '{n} اذکار', id: '{n} zikir' },

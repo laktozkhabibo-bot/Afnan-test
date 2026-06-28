@@ -738,6 +738,23 @@ function QuranIndex({ onOpen, onOpenKhatmat, onOpenSaved, savedCount, bookmark, 
         </div>
       )}
 
+      {/* متابعة قراءة المصحف — في نظام صفحات المصحف */}
+      {quranView === 'pages' && pageBookmark && (
+        <div onClick={onResumePage} className="afn-tap" style={{ display: 'flex', alignItems: 'center', gap: 13, cursor: 'pointer',
+          borderRadius: 18, padding: '14px 16px', marginBottom: 12, color: '#fff',
+          background: `linear-gradient(120deg,${T.bark},#A9822F)`, boxShadow: `0 8px 22px ${T.bark}33` }}>
+          <div style={{ width: 42, height: 42, borderRadius: 12, flexShrink: 0, background: 'rgba(255,255,255,.92)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src="assets/qurani/bookmark.png" alt="" style={{ width: 24, height: 24, display: 'block' }} />
+          </div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontFamily: T.fBody, fontSize: 12, opacity: .85, fontWeight: 600 }}>{window.t('qp_menu_goto')}</div>
+            <div style={{ fontFamily: T.fHead, fontSize: 17, fontWeight: 700 }}>{window.tf('qp_page_of', { n: window.tnum(pageBookmark) })}</div>
+          </div>
+          <Icon name="chevronL" size={20} color="#fff" />
+        </div>
+      )}
+
       {/* مدخل الختمات */}
       <div onClick={onOpenKhatmat} className="afn-tap" style={{ display: 'flex', alignItems: 'center', gap: 13, cursor: 'pointer',
         borderRadius: 18, padding: '14px 16px', marginBottom: 16, background: T.card, border: `1px solid ${T.line}`,
